@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicio - FoodExpress</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="logo-container">
+          <i class="fa-solid fa-bag-shopping"></i> FoodExpress
+        </div>
+        <a href="index.html" class="btn-volver"
+          ><i class="fa-solid fa-arrow-left"></i> Volver</a
+        >
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li style="position: relative">
+            <a href="#" id="btn-productos"
+              >Productos <i class="fa-solid fa-caret-down"></i
+            ></a>
+            <ul id="dropdown-menu" class="dropdown">
+              <li><a href="productos.html">Ver Pastas</a></li>
+              <li><a href="#">Pizzas</a></li>
+              <li><a href="#">Hamburguesas</a></li>
+            </ul>
+          </li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contactos.html">Contactos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="grid-servicios">
+        <div class="servicio-card">
+          <i class="fa-regular fa-thumbs-down"></i>
+          <h2>¿Quejas?</h2>
+          <p>
+            Nos gustaría conocer tu experiencia y solucionar cualquier
+            inconveniente.
+          </p>
+          <button
+            class="btn-main"
+            style="background: var(--primary); color: white"
+          >
+            Reportar
+          </button>
+        </div>
+        <div class="servicio-card">
+          <i class="fa-regular fa-comments"></i>
+          <h2>¿Sugerencias?</h2>
+          <p>
+            Puedes darnos sugerencias para mejorar nuestros servicios y crecer
+            juntos.
+          </p>
+          <button
+            class="btn-main"
+            style="background: var(--primary); color: white"
+          >
+            Escríbenos
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <h2><i class="fa-solid fa-bag-shopping"></i> FoodExpress</h2>
+          <p>Tu comida favorita a la puerta de tu casa</p>
+          <div class="footer-links">
+            <a href="contactos.html">Contactos</a
+            ><a href="servicio.html">Servicio al cliente</a>
+          </div>
+        </div>
+        <div class="footer-center">
+          <p>
+            Llama ya <br /><strong
+              ><i class="fa-solid fa-phone"></i> 6035-2265</strong
+            >
+          </p>
+        </div>
+        <div class="footer-right">
+          <div class="social-icons">
+            <a href=""><i class="fa-brands fa-youtube"></i></a
+            ><a
+              href="https://www.instagram.com/danielx_p.r/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-instagram"></i></a
+            ><a href="#"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+          <p>¡Gracias por preferirnos!</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FoodExpress. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="js/interaccion.js"></script>
+  </body>
+</html>
