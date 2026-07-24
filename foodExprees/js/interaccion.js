@@ -1,3 +1,6 @@
+alert(
+  "Bienvenido a FoodExpress, tu comida favorita a domicilio. ¡Tu comida a tu puerta de casa!",
+);
 const mano = document.getElementById("mi-mano");
 
 function activarSaludo() {
