@@ -1,9 +1,147 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FoodExpress-Catalogo de Hamburguesas</title>
+    <title>FoodExpress - Hamburguesas</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="logo-container">
+          <i id="mi-mano" class="fa-solid fa-bag-shopping"></i> FoodExpress
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li style="position: relative">
+            <a href="#" id="btn-productos" class="active"
+              >Productos <i class="fa-solid fa-caret-down"></i
+            ></a>
+            <ul id="dropdown-menu" class="dropdown">
+              <li><a href="productos.html">Ver todos</a></li>
+              <li><a href="pizza.html">Pizzas</a></li>
+              <li><a href="hamburguesa.html">Hamburguesas</a></li>
+              <li><a href="bebidas.html">Bebidas</a></li>
+            </ul>
+          </li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contactos.html">Contactos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="breadcrumb">
+          <a href="../index.html">Inicio</a> <span>/</span>
+          <a href="productos.html">Productos</a> <span>/</span>
+          <span>Hamburguesas</span>
+        </div>
+        <h1>Hamburguesas</h1>
+        <p>Carne 100% de res a la parrilla, en pan brioche recién horneado</p>
+      </section>
+
+      <section class="container">
+        <div class="grid-productos">
+          <div class="card">
+            <span class="badge badge-primary">Más vendida</span>
+            <img
+              src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80"
+              alt="Hamburguesa Clásica"
+            />
+            <h3>Clásica</h3>
+            <p class="precio">$5.50</p>
+            <button class="btn-comprar">Agregar</button>
+          </div>
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=500&q=80"
+              alt="Hamburguesa Doble Queso"
+            />
+            <h3>Doble Queso</h3>
+            <p class="precio">$6.75</p>
+            <button class="btn-comprar">Agregar</button>
+          </div>
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1551615593-ef5fe247e8f7?w=500&q=80"
+              alt="Hamburguesa BBQ Bacon"
+            />
+            <h3>BBQ Bacon</h3>
+            <p class="precio">$7.25</p>
+            <button class="btn-comprar">Agregar</button>
+          </div>
+          <div class="card">
+            <span class="badge">Nuevo</span>
+            <img
+              src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=500&q=80"
+              alt="Hamburguesa Picante"
+            />
+            <h3>Jalapeño Picante</h3>
+            <p class="precio">$6.90</p>
+            <button class="btn-comprar">Agregar</button>
+          </div>
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500&q=80"
+              alt="Hamburguesa Vegetariana"
+            />
+            <h3>Vegetariana</h3>
+            <p class="precio">$6.25</p>
+            <button class="btn-comprar">Agregar</button>
+          </div>
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=500&q=80"
+              alt="Hamburguesa Triple"
+            />
+            <h3>Triple Carne</h3>
+            <p class="precio">$8.90</p>
+            <button class="btn-comprar">Agregar</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <h2><i class="fa-solid fa-bag-shopping"></i> FoodExpress</h2>
+          <p>Tu comida favorita a la puerta de tu casa</p>
+          <div class="footer-links">
+            <a href="contactos.html">Contactos</a
+            ><a href="servicio.html">Servicio al cliente</a>
+          </div>
+        </div>
+        <div class="footer-center">
+          <p>
+            Llama ya <br /><strong
+              ><i class="fa-solid fa-phone"></i> 6035-2265</strong
+            >
+          </p>
+        </div>
+        <div class="footer-right">
+          <div class="social-icons">
+            <a href="https://web.whatsapp.com/"
+              ><i class="fa-brands fa-youtube"></i></a
+            ><a href="#"><i class="fa-brands fa-instagram"></i></a
+            ><a href="#"><i class="fa-brands fa-facebook"></i></a>
+          </div>
+          <p>¡Gracias por preferirnos!</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FoodExpress. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="../js/interaccion.js"></script>
+  </body>
 </html>

@@ -1,19 +1,10 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FoodExpress-Contactos</title>
-  </head>
-  <body></body>
-</html>
-<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contactos - FoodExpress</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>FoodExpress - Contactos</title>
+    <link rel="stylesheet" href="../css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -23,84 +14,120 @@
     <header>
       <div class="header-top">
         <div class="logo-container">
-          <i class="fa-solid fa-bag-shopping"></i> FoodExpress
+          <i id="mi-mano" class="fa-solid fa-bag-shopping"></i> FoodExpress
         </div>
-        <a href="index.html" class="btn-volver"
-          ><i class="fa-solid fa-arrow-left"></i> Volver</a
-        >
       </div>
       <nav>
         <ul>
-          <li><a href="index.html">Inicio</a></li>
+          <li><a href="../index.html">Inicio</a></li>
           <li style="position: relative">
             <a href="#" id="btn-productos"
               >Productos <i class="fa-solid fa-caret-down"></i
             ></a>
             <ul id="dropdown-menu" class="dropdown">
-              <li><a href="productos.html">Ver Pastas</a></li>
-              <li><a href="#">Pizzas</a></li>
-              <li><a href="#">Hamburguesas</a></li>
+              <li><a href="productos.html">Ver todos</a></li>
+              <li><a href="pizza.html">Pizzas</a></li>
+              <li><a href="hamburguesa.html">Hamburguesas</a></li>
+              <li><a href="bebidas.html">Bebidas</a></li>
             </ul>
           </li>
           <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="contactos.html">Contactos</a></li>
+          <li><a href="contactos.html" class="active">Contactos</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="container">
-      <div class="banner-contacto">
-        <h1>CONTÁCTANOS</h1>
-        <p>¿Tienes alguna duda o comentario? Nos gustaría escucharte</p>
-      </div>
-      <div class="grid-info">
-        <div class="info-card">
-          <i class="fa-solid fa-location-dot"></i>
-          <h3>Ubicación</h3>
-          <p><small>Distrito de Sonsonate, El Salvador</small></p>
-        </div>
-        <div class="info-card">
-          <i class="fa-solid fa-phone"></i>
-          <h3>Teléfono</h3>
-          <p>7589-9858</p>
-        </div>
-        <div class="info-card">
-          <i class="fa-solid fa-envelope"></i>
-          <h3>Correo electrónico</h3>
-          <p>foodexpress@gmail.com</p>
-        </div>
-        <div class="info-card">
-          <i class="fa-solid fa-clock"></i>
-          <h3>Nuestros Horarios</h3>
-          <p>9:00 AM a 7:00 PM</p>
-        </div>
-      </div>
-      <div class="comentarios">
-        <div class="comentario-card">
-          <i class="fa-solid fa-circle-user"></i>
-          <div>
-            <strong>User 1</strong>
-            <p>
-              <small
-                >El mejor lugar para pedidos seguros, tiene las tres B: de
-                bueno, bonito y barato.</small
-              >
-            </p>
+    <main>
+      <section
+        class="banner-contacto"
+        style="margin: 40px 5% 0; border-radius: 20px"
+      >
+        <h2>Hablemos</h2>
+        <p>Dudas, pedidos grandes o comentarios — estamos para ayudarte</p>
+      </section>
+
+      <section class="container">
+        <div class="grid-info">
+          <div class="info-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <h4>Dirección</h4>
+            <p>Av. Principal 123, San Salvador</p>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-phone"></i>
+            <h4>Teléfono</h4>
+            <p>6035-2265</p>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-clock"></i>
+            <h4>Horario</h4>
+            <p>Lunes a domingo, 10:00 am - 10:00 pm</p>
+          </div>
+          <div class="info-card">
+            <i class="fa-solid fa-envelope"></i>
+            <h4>Correo</h4>
+            <p>hola@foodexpress.com</p>
           </div>
         </div>
-        <div class="comentario-card">
-          <i class="fa-solid fa-circle-user"></i>
-          <div>
-            <strong>User 2</strong>
-            <p>
-              <small
-                >El mejor sitio que te ofrece la opción para llevarte hasta la
-                puerta de tu casa lo mejor que es 100% confiable.</small
-              >
-            </p>
+
+        <div class="contacto-layout">
+          <form class="form-contacto">
+            <h2 class="section-title" style="margin-bottom: 8px">
+              Envíanos un mensaje
+            </h2>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Tu nombre"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Correo</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="tucorreo@ejemplo.com"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="asunto">Asunto</label>
+              <select id="asunto" name="asunto">
+                <option>Consulta sobre un pedido</option>
+                <option>Catering para eventos</option>
+                <option>Sugerencia</option>
+                <option>Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                placeholder="Cuéntanos en qué te ayudamos"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar mensaje</button>
+          </form>
+
+          <div class="mapa-embed">
+            <iframe
+              src="https://maps.google.com/maps?q=San%20Salvador%2C%20El%20Salvador&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación de FoodExpress"
+            ></iframe>
           </div>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer>
@@ -109,7 +136,7 @@
           <h2><i class="fa-solid fa-bag-shopping"></i> FoodExpress</h2>
           <p>Tu comida favorita a la puerta de tu casa</p>
           <div class="footer-links">
-            <a href="contactos.html">Contactos</a
+            <a href="contactos.html" class="active">Contactos</a
             ><a href="servicio.html">Servicio al cliente</a>
           </div>
         </div>
@@ -122,7 +149,8 @@
         </div>
         <div class="footer-right">
           <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-youtube"></i></a
+            <a href="https://web.whatsapp.com/"
+              ><i class="fa-brands fa-youtube"></i></a
             ><a href="#"><i class="fa-brands fa-instagram"></i></a
             ><a href="#"><i class="fa-brands fa-facebook"></i></a>
           </div>
@@ -134,6 +162,6 @@
       </div>
     </footer>
 
-    <script src="js/interaccion.js"></script>
+    <script src="../js/interaccion.js"></script>
   </body>
 </html>

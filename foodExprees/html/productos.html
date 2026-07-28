@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Productos - FoodExpress</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>FoodExpress - Productos</title>
+    <link rel="stylesheet" href="../css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -14,23 +14,21 @@
     <header>
       <div class="header-top">
         <div class="logo-container">
-          <i class="fa-solid fa-bag-shopping"></i> FoodExpress
+          <i id="mi-mano" class="fa-solid fa-bag-shopping"></i> FoodExpress
         </div>
-        <a href="index.html" class="btn-volver"
-          ><i class="fa-solid fa-arrow-left"></i> Volver</a
-        >
       </div>
       <nav>
         <ul>
-          <li><a href="index.html">Inicio</a></li>
+          <li><a href="../index.html">Inicio</a></li>
           <li style="position: relative">
-            <a href="#" id="btn-productos"
+            <a href="#" id="btn-productos" class="active"
               >Productos <i class="fa-solid fa-caret-down"></i
             ></a>
             <ul id="dropdown-menu" class="dropdown">
-              <li><a href="productos.html">Ver Pastas</a></li>
-              <li><a href="#">Pizzas</a></li>
-              <li><a href="#">Hamburguesas</a></li>
+              <li><a href="productos.html">Ver todos</a></li>
+              <li><a href="pizza.html">Pizzas</a></li>
+              <li><a href="hamburguesa.html">Hamburguesas</a></li>
+              <li><a href="bebidas.html">Bebidas</a></li>
             </ul>
           </li>
           <li><a href="nosotros.html">Nosotros</a></li>
@@ -39,46 +37,98 @@
       </nav>
     </header>
 
-    <main class="container">
-      <h1 class="section-title">Pastas</h1>
-      <div class="grid-productos">
-        <div class="card">
-          <img
-            src="https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=500&q=80"
-            alt="Pasta Alfredo"
-          />
-          <h3>Pasta Alfredo</h3>
-          <p class="precio">$3.25</p>
-          <button class="btn-comprar">Comprar</button>
+    <main>
+      <section class="page-hero">
+        <div class="breadcrumb">
+          <a href="../index.html">Inicio</a> <span>/</span>
+          <span>Productos</span>
         </div>
-        <div class="card">
-          <img
-            src="https://images.unsplash.com/photo-1612874742237-6526221588e3?w=500&q=80"
-            alt="Pasta Carbonara"
-          />
-          <h3>Pasta Carbonara</h3>
-          <p class="precio">$3.99</p>
-          <button class="btn-comprar">Comprar</button>
+        <h1>Nuestro menú completo</h1>
+        <p>Todo lo que preparamos, organizado por categoría</p>
+      </section>
+
+      <section class="container">
+        <h2 class="section-title">Categorías</h2>
+        <div class="grid-categorias">
+          <a
+            href="pizza.html"
+            class="card"
+            style="text-decoration: none; color: inherit"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&q=80"
+              alt="Pizzas"
+            />
+            <h3>Pizzas</h3>
+          </a>
+          <a
+            href="hamburguesa.html"
+            class="card"
+            style="text-decoration: none; color: inherit"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80"
+              alt="Hamburguesas"
+            />
+            <h3>Hamburguesas</h3>
+          </a>
+          <a
+            href="bebidas.html"
+            class="card"
+            style="text-decoration: none; color: inherit"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=500&q=80"
+              alt="Bebidas"
+            />
+            <h3>Bebidas</h3>
+          </a>
         </div>
-        <div class="card">
-          <img
-            src="https://images.unsplash.com/photo-1588013273468-315fd88ea34c?w=500&q=80"
-            alt="Pasta Ravioli"
-          />
-          <h3>Pasta Ravioli</h3>
-          <p class="precio">$3.99</p>
-          <button class="btn-comprar">Comprar</button>
+      </section>
+
+      <section class="container" style="padding-top: 0">
+        <h2 class="section-title">Los más pedidos</h2>
+        <div class="grid-productos">
+          <div class="card">
+            <span class="badge badge-primary">Más vendida</span>
+            <img
+              src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&q=80"
+              alt="Pizza Pepperoni"
+            />
+            <h3>Pizza Pepperoni</h3>
+            <p class="precio">$8.50</p>
+            <button class="btn-comprar">Agregar</button>
+          </div>
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80"
+              alt="Hamburguesa Doble"
+            />
+            <h3>Hamburguesa Doble</h3>
+            <p class="precio">$6.75</p>
+            <button class="btn-comprar">Agregar</button>
+          </div>
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=500&q=80"
+              alt="Malteada de fresa"
+            />
+            <h3>Malteada de fresa</h3>
+            <p class="precio">$3.25</p>
+            <button class="btn-comprar">Agregar</button>
+          </div>
+          <div class="card">
+            <span class="badge">Nuevo</span>
+            <img
+              src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=500&q=80"
+              alt="Pizza Hawaiana"
+            />
+            <h3>Pizza Hawaiana</h3>
+            <p class="precio">$9.00</p>
+            <button class="btn-comprar">Agregar</button>
+          </div>
         </div>
-        <div class="card">
-          <img
-            src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=500&q=80"
-            alt="Pasta al ajillo"
-          />
-          <h3>Pasta al Ajillo</h3>
-          <p class="precio">$3.99</p>
-          <button class="btn-comprar">Comprar</button>
-        </div>
-      </div>
+      </section>
     </main>
 
     <footer>
@@ -100,7 +150,8 @@
         </div>
         <div class="footer-right">
           <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-youtube"></i></a
+            <a href="https://web.whatsapp.com/"
+              ><i class="fa-brands fa-youtube"></i></a
             ><a href="#"><i class="fa-brands fa-instagram"></i></a
             ><a href="#"><i class="fa-brands fa-facebook"></i></a>
           </div>
@@ -112,6 +163,6 @@
       </div>
     </footer>
 
-    <script src="js/interaccion.js"></script>
+    <script src="../js/interaccion.js"></script>
   </body>
 </html>

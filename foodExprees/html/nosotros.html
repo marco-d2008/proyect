@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nosotros - FoodExpress</title>
+    <title>FoodExpress - Nosotros</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link
       rel="stylesheet"
@@ -14,11 +14,8 @@
     <header>
       <div class="header-top">
         <div class="logo-container">
-          <i class="fa-solid fa-bag-shopping"></i> FoodExpress
+          <i id="mi-mano" class="fa-solid fa-bag-shopping"></i> FoodExpress
         </div>
-        <a href="index.html" class="btn-volver"
-          ><i class="fa-solid fa-arrow-left"></i> Volver</a
-        >
       </div>
       <nav>
         <ul>
@@ -28,40 +25,93 @@
               >Productos <i class="fa-solid fa-caret-down"></i
             ></a>
             <ul id="dropdown-menu" class="dropdown">
-              <li><a href="productos.html">Ver Pastas</a></li>
-              <li><a href="#">Pizzas</a></li>
-              <li><a href="#">Hamburguesas</a></li>
+              <li><a href="productos.html">Ver todos</a></li>
+              <li><a href="pizza.html">Pizzas</a></li>
+              <li><a href="hamburguesa.html">Hamburguesas</a></li>
+              <li><a href="bebidas.html">Bebidas</a></li>
             </ul>
           </li>
-          <li><a href="/food/html/nosotros.html">Nosotros</a></li>
-          <li><a href="/food/html/contactos.html">Contactos</a></li>
+          <li><a href="nosotros.html" class="active">Nosotros</a></li>
+          <li><a href="contactos.html">Contactos</a></li>
         </ul>
       </nav>
     </header>
 
-    <main class="container">
-      <h1 class="section-title">Acerca de nosotros</h1>
-      <div class="nosotros-content">
-        <div class="nosotros-text">
-          <p>
-            En <strong>FoodExpress</strong>, creemos que la comida rápida no
-            tiene que ser sinónimo de baja calidad. Seleccionamos ingredientes
-            frescos, preparamos cada pedido al momento y cuidamos hasta el
-            último detalle para que recibas una experiencia rápida, pero con
-            sabor auténtico.
-          </p>
-          <br />
-          <p>
-            Nuestro compromiso: servirte con eficiencia, limpieza y una sonrisa,
-            porque tu tiempo vale tanto como tu paladar.
-          </p>
+    <main>
+      <section class="page-hero">
+        <div class="breadcrumb">
+          <a href="../index.html">Inicio</a> <span>/</span>
+          <span>Nosotros</span>
         </div>
-        <img
-          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80"
-          alt="Interior Restaurante"
-          class="nosotros-img"
-        />
-      </div>
+        <h1>Quiénes somos</h1>
+        <p>Comida rápida hecha con calma, desde 2018</p>
+      </section>
+
+      <section class="container">
+        <div class="nosotros-content">
+          <div class="nosotros-text">
+            <p>
+              <strong>FoodExpress</strong> nació en 2018 como un pequeño local
+              de barrio con tres mesas y una idea simple: la comida rápida
+              también puede prepararse con ingredientes frescos y buen servicio.
+            </p>
+            <br />
+            <p>
+              Hoy entregamos <strong>pizzas, hamburguesas y bebidas</strong>
+              a domicilio en toda la ciudad, pero seguimos amasando la masa a
+              diario y cortando la carne fresca cada mañana, igual que el primer
+              día.
+            </p>
+            <br />
+            <p>
+              Nuestro equipo de <strong>más de 30 personas</strong> — entre
+              cocina, reparto y atención al cliente — trabaja para que tu pedido
+              llegue caliente, completo y a tiempo.
+            </p>
+          </div>
+          <img
+            class="nosotros-img"
+            src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80"
+            alt="Equipo de cocina de FoodExpress"
+          />
+        </div>
+      </section>
+
+      <section class="container" style="padding-top: 0">
+        <h2 class="section-title">Lo que dicen de nosotros</h2>
+        <div class="comentarios">
+          <div class="comentario-card">
+            <i class="fa-solid fa-quote-left"></i>
+            <div>
+              <strong>Marta G.</strong>
+              <p>
+                "El pedido siempre llega antes de lo que dice la app y la pizza
+                sigue caliente. Es mi lugar de confianza para los viernes."
+              </p>
+            </div>
+          </div>
+          <div class="comentario-card">
+            <i class="fa-solid fa-quote-left"></i>
+            <div>
+              <strong>Roberto C.</strong>
+              <p>
+                "Pedí catering para el cumpleaños de mi hija y todo salió
+                perfecto: puntuales, amables y la comida no faltó."
+              </p>
+            </div>
+          </div>
+          <div class="comentario-card">
+            <i class="fa-solid fa-quote-left"></i>
+            <div>
+              <strong>Ana L.</strong>
+              <p>
+                "La hamburguesa BBQ Bacon es mi favorita. Se nota que la carne
+                es fresca y no de bolsa."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -83,7 +133,8 @@
         </div>
         <div class="footer-right">
           <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-youtube"></i></a
+            <a href="https://web.whatsapp.com/"
+              ><i class="fa-brands fa-youtube"></i></a
             ><a href="#"><i class="fa-brands fa-instagram"></i></a
             ><a href="#"><i class="fa-brands fa-facebook"></i></a>
           </div>
@@ -95,6 +146,6 @@
       </div>
     </footer>
 
-    <script src="js/interaccion.js"></script>
+    <script src="../js/interaccion.js"></script>
   </body>
 </html>
