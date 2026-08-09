@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodExpress - Inicio</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="logo-container">
+          <i id="mi-mano" class="fa-solid fa-bag-shopping"></i> FoodExpress
+        </div>
+        <a
+          href="html/carrito.html"
+          class="btn-carrito"
+          aria-label="Ver carrito"
+        >
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count" class="cart-badge">0</span>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li style="position: relative">
+            <a href="#" id="btn-productos"
+              >Productos <i class="fa-solid fa-caret-down"></i
+            ></a>
+            <ul id="dropdown-menu" class="dropdown">
+              <li><a href="html/productos.html">Ver todos</a></li>
+              <li><a href="html/pizza.html">Pizzas</a></li>
+              <li><a href="html/hamburguesa.html">Hamburguesas</a></li>
+              <li><a href="html/bebidas.html">Bebidas</a></li>
+              <li><a href="html/tacos.html">Tacos</a></li>
+              <li><a href="html/pollo.html">Pollo</a></li>
+              <li><a href="html/pastas.html">Pastas</a></li>
+            </ul>
+          </li>
+          <li><a href="html/nosotros.html">Nosotros</a></li>
+          <li><a href="html/contactos.html">Contactos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Tu comida favorita, a domicilio</h1>
+        <p>Deliciosos platillos entregados a la puerta de casa</p>
+        <a href="html/productos.html" class="btn-main">Ver menú</a>
+      </section>
+
+      <section class="container">
+        <h2 class="section-title">Explora por categoría</h2>
+        <div class="grid-categorias">
+          <a
+            href="html/pizza.html"
+            class="card"
+            style="text-decoration: none; color: inherit"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&q=80"
+              alt="Pizzas"
+            />
+            <h3>Pizzas</h3>
+          </a>
+          <a
+            href="html/hamburguesa.html"
+            class="card"
+            style="text-decoration: none; color: inherit"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80"
+              alt="Hamburguesas"
+            />
+            <h3>Hamburguesas</h3>
+          </a>
+          <a
+            href="html/bebidas.html"
+            class="card"
+            style="text-decoration: none; color: inherit"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=500&q=80"
+              alt="Bebidas"
+            />
+            <h3>Bebidas</h3>
+          </a>
+          <a
+            href="html/tacos.html"
+            class="card"
+            style="text-decoration: none; color: inherit"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=500&q=80"
+              alt="Tacos"
+            />
+            <h3>Tacos</h3>
+          </a>
+          <a
+            href="html/pollo.html"
+            class="card"
+            style="text-decoration: none; color: inherit"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=500&q=80"
+              alt="Pollo"
+            />
+            <h3>Pollo</h3>
+          </a>
+          <a
+            href="html/pastas.html"
+            class="card"
+            style="text-decoration: none; color: inherit"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=500&q=80"
+              alt="Pastas"
+            />
+            <h3>Pastas</h3>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <h2><i class="fa-solid fa-bag-shopping"></i> FoodExpress</h2>
+          <p>Tu comida favorita a la puerta de tu casa</p>
+          <div class="footer-links">
+            <a href="html/contactos.html">Contactos</a
+            ><a href="html/servicio.html">Servicio al cliente</a>
+          </div>
+        </div>
+        <div class="footer-center">
+          <p>
+            Llama ya <br /><strong
+              ><i class="fa-solid fa-phone"></i> 6035-2265</strong
+            >
+          </p>
+        </div>
+        <div class="footer-right">
+          <div class="social-icons">
+            <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a
+            ><a href="#"><i class="fa-brands fa-instagram"></i></a
+            ><a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+          <p>¡Gracias por preferirnos!</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FoodExpress. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script src="js/interaccion.js"></script>
+  </body>
+</html>
