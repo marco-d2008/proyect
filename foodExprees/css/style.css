@@ -1124,6 +1124,233 @@ nav a.active {
 }
 
 /* ============================================================
+   ÍCONO DE CARRITO EN EL HEADER
+   ============================================================ */
+.btn-carrito {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.btn-carrito:hover {
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  border-color: transparent;
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 8px 24px rgba(240, 90, 40, 0.4);
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: var(--primary);
+  color: var(--white);
+  font-size: 0.68rem;
+  font-weight: 800;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  border: 2px solid var(--dark);
+}
+
+/* ============================================================
+   CARRITO / CHECKOUT
+   ============================================================ */
+.carrito-layout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.carrito-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.carrito-item {
+  display: grid;
+  grid-template-columns: 84px 1fr auto auto;
+  align-items: center;
+  gap: 18px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-glass);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition);
+}
+
+.carrito-item:hover {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.carrito-item img {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.carrito-item-info h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.carrito-item-info p {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.qty-stepper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--light-bg);
+  border-radius: 30px;
+  padding: 4px 10px;
+}
+
+.qty-stepper button {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  background: var(--white);
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: var(--transition);
+}
+
+.qty-stepper button:hover {
+  background: var(--primary);
+  color: var(--white);
+  transform: scale(1.08);
+}
+
+.qty-stepper span {
+  min-width: 18px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.btn-eliminar {
+  background: none;
+  border: none;
+  color: var(--gray-600);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 8px;
+}
+
+.btn-eliminar:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+.carrito-resumen {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-glass);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: sticky;
+  top: 110px;
+}
+
+.resumen-linea {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  color: var(--gray-600);
+  font-size: 0.95rem;
+}
+
+.resumen-linea.total {
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--dark);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 16px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.carrito-vacio {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.carrito-vacio i {
+  font-size: 4rem;
+  color: var(--gray-600);
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.carrito-vacio h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.carrito-vacio p {
+  color: var(--gray-600);
+  margin-bottom: 24px;
+}
+
+.confirmacion-pedido {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.confirmacion-pedido i {
+  font-size: 4.5rem;
+  color: #2ecc71;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.confirmacion-pedido h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.confirmacion-pedido p {
+  color: var(--gray-600);
+  margin-bottom: 28px;
+}
+
+/* ============================================================
    RESPONSIVE — DISEÑO WEB RESPONSIVO (DWR)
    Breakpoints: escritorio grande > 1200px (base) → laptop 1024px
    → tablet 768px → móvil grande 600px → móvil pequeño 380px
@@ -1230,6 +1457,14 @@ nav a.active {
   .form-contacto {
     padding: 28px;
   }
+
+  .carrito-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .carrito-resumen {
+    position: static;
+  }
 }
 
 /* ---- MÓVIL GRANDE (≤600px) ---- */
@@ -1300,6 +1535,29 @@ nav a.active {
 
   .page-hero {
     padding: 64px 16px;
+  }
+
+  .carrito-item {
+    grid-template-columns: 60px 1fr;
+    grid-template-areas:
+      "img info"
+      "qty eliminar";
+  }
+  .carrito-item img {
+    grid-area: img;
+    width: 60px;
+    height: 60px;
+  }
+  .carrito-item-info {
+    grid-area: info;
+  }
+  .qty-stepper {
+    grid-area: qty;
+    justify-self: start;
+  }
+  .btn-eliminar {
+    grid-area: eliminar;
+    justify-self: end;
   }
 }
 
