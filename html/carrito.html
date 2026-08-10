@@ -1,3 +1,4 @@
+<<<<<<< HEAD:html/carrito.html
 <!doctype html>
 <html lang="es">
   <head>
@@ -228,3 +229,236 @@
     <script src="../js/carrito.js"></script>
   </body>
 </html>
+=======
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodExpress - Carrito</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="logo-container">
+          <i id="mi-mano" class="fa-solid fa-bag-shopping"></i> FoodExpress
+        </div>
+        <a href="carrito.html" class="btn-carrito" aria-label="Ver carrito">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span id="cart-count" class="cart-badge">0</span>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li style="position: relative">
+            <a href="#" id="btn-productos"
+              >Productos <i class="fa-solid fa-caret-down"></i
+            ></a>
+            <ul id="dropdown-menu" class="dropdown">
+              <li><a href="productos.html">Ver todos</a></li>
+              <li><a href="pizza.html">Pizzas</a></li>
+              <li><a href="hamburguesa.html">Hamburguesas</a></li>
+              <li><a href="bebidas.html">Bebidas</a></li>
+              <li><a href="tacos.html">Tacos</a></li>
+              <li><a href="pollo.html">Pollo</a></li>
+              <li><a href="pastas.html">Pastas</a></li>
+            </ul>
+          </li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contactos.html">Contactos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="breadcrumb">
+          <a href="../index.html">Inicio</a> <span>/</span>
+          <span>Carrito</span>
+        </div>
+        <h1>Tu carrito</h1>
+        <p>Revisa tu pedido antes de confirmarlo</p>
+      </section>
+
+      <section class="container">
+        <!-- Carrito con productos -->
+        <div id="carrito-layout" class="carrito-layout">
+          <div>
+            <h2 class="section-title">Productos</h2>
+            <div id="carrito-lista" class="carrito-lista">
+              <!-- Los productos se insertan aquí con JavaScript -->
+            </div>
+
+            <button
+              type="button"
+              id="btn-vaciar-carrito"
+              class="btn-comprar"
+              style="
+                background: transparent;
+                color: var(--gray-600);
+                box-shadow: none;
+                border: 1px solid rgba(0, 0, 0, 0.15);
+              "
+            >
+              Vaciar carrito
+            </button>
+
+            <h2 class="section-title" style="margin-top: 40px">
+              Datos de entrega
+            </h2>
+            <form id="form-checkout" class="form-contacto">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="co-nombre">Nombre completo</label>
+                  <input
+                    type="text"
+                    id="co-nombre"
+                    name="nombre"
+                    placeholder="Tu nombre"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="co-telefono">Teléfono</label>
+                  <input
+                    type="tel"
+                    id="co-telefono"
+                    name="telefono"
+                    placeholder="0000-0000"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="co-direccion">Dirección de entrega</label>
+                <input
+                  type="text"
+                  id="co-direccion"
+                  name="direccion"
+                  placeholder="Calle, número, referencia"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="co-pago">Método de pago</label>
+                <select id="co-pago" name="pago">
+                  <option>Efectivo contra entrega</option>
+                  <option>Tarjeta contra entrega</option>
+                  <option>Transferencia bancaria</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="co-notas">Notas (opcional)</label>
+                <textarea
+                  id="co-notas"
+                  name="notas"
+                  placeholder="Indicaciones para el repartidor"
+                ></textarea>
+              </div>
+            </form>
+          </div>
+
+          <aside id="carrito-resumen" class="carrito-resumen">
+            <h2 class="section-title" style="margin-bottom: 24px">Resumen</h2>
+            <div class="resumen-linea">
+              <span>Subtotal</span>
+              <span id="resumen-subtotal">$0.00</span>
+            </div>
+            <div class="resumen-linea">
+              <span>Envío</span>
+              <span id="resumen-envio">$0.00</span>
+            </div>
+            <div class="resumen-linea total">
+              <span>Total</span>
+              <span id="resumen-total">$0.00</span>
+            </div>
+            <button
+              type="submit"
+              form="form-checkout"
+              class="btn-enviar"
+              style="width: 100%; justify-self: stretch; text-align: center"
+            >
+              Confirmar pedido
+            </button>
+          </aside>
+        </div>
+
+        <!-- Estado: carrito vacío -->
+        <div id="carrito-vacio" class="carrito-vacio" style="display: none">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <h3>Tu carrito está vacío</h3>
+          <p>Agrega productos desde el menú para armar tu pedido</p>
+          <a
+            href="productos.html"
+            class="btn-main"
+            style="color: var(--white); background: var(--primary)"
+            >Ver menú</a
+          >
+        </div>
+
+        <!-- Estado: pedido confirmado -->
+        <div
+          id="confirmacion-pedido"
+          class="confirmacion-pedido"
+          style="display: none"
+        >
+          <i class="fa-solid fa-circle-check"></i>
+          <h3>¡Pedido confirmado!</h3>
+          <p>
+            Gracias por tu compra. Te llamaremos para confirmar los detalles de
+            la entrega.
+          </p>
+          <a
+            href="productos.html"
+            class="btn-main"
+            style="color: var(--white); background: var(--primary)"
+            >Seguir comprando</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <h2><i class="fa-solid fa-bag-shopping"></i> FoodExpress</h2>
+          <p>Tu comida favorita a la puerta de tu casa</p>
+          <div class="footer-links">
+            <a href="contactos.html">Contactos</a
+            ><a href="servicio.html">Servicio al cliente</a>
+          </div>
+        </div>
+        <div class="footer-center">
+          <p>
+            Llama ya <br /><strong
+              ><i class="fa-solid fa-phone"></i> 6035-2265</strong
+            >
+          </p>
+        </div>
+        <div class="footer-right">
+          <div class="social-icons">
+            <a href="https://web.whatsapp.com/"
+              ><i class="fa-brands fa-youtube"></i></a
+            ><a href="#"><i class="fa-brands fa-instagram"></i></a
+            ><a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+          <p>¡Gracias por preferirnos!</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FoodExpress. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="../js/interaccion.js"></script>
+    <script src="../js/carrito.js"></script>
+  </body>
+</html>
+>>>>>>> e8ca05690947d6ece72936beb807a081a1af71e8:foodExprees/html/carrito.html
